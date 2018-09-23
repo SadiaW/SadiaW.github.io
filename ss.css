@@ -1,0 +1,150 @@
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    padding: 25px;
+    margin: 0;
+    font-family: Arial;
+    background-image: url("city scene.jpg");
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 20px;
+    font-size: 17px;
+    width: 20%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Home {
+  background-image: url("tab background.jpg");
+  height: 160%;
+}
+#About {
+  background-image: url("tab background.jpg");
+  height: 430%;
+}
+#Alternatives {
+  background-image: url("tab background.jpg");
+  height: 1410%;
+}
+#Aesthetics {
+  background-image: url("tab background.jpg");
+  height: 2528%;
+}
+
+#Donate {
+  background-image: url("tab background.jpg");
+  height: 233%
+}
+
+h1 {
+  color: rgb(51, 0, 51);
+  font-size: 30px;
+}
+
+h2{
+  color: rgb(51, 0, 51);
+  font-size: 30px;
+}
+
+h3{
+  color: rgb(51, 0, 51);
+  font-size: 22px;
+}
+
+h4{
+  color: rgb(51, 0, 51);
+  font-size: 16px;
+}
+
+h5{
+  color: rgb(51, 0, 51);
+  font-size: 25px;
+}
+
+
+.mySlides {
+ width:  1200px;
+ height: 500px;
+}
+
+.key{
+  width: 550px;
+  height: 200px;
+}
+
+.brand {
+  width: 300px;
+  height: 100px;
+}
+
+.picture {
+  width: 590px;
+  height: 500px;
+}
+
+.pic {
+  width: 800px;
+  height: 400px;
+}
+
+.pic2 {
+  width: 800px;
+  height: 200px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.subheading{
+  width: 1100px;
+  height: 120px;
+}
+
+.mainTitle{
+  width: 1000px;
+  height: 100px;
+}
+
+ul.form {
+    color: black;
+    list-style-type: square;
+}
+
+.aes{
+  width: 900px;
+  height: 90px;
+}
+
+.seasons{
+  width: 500px;
+  height: 500px;
+}
