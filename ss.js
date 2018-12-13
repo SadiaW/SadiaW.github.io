@@ -28,8 +28,6 @@ function goForward() {
 
 function startTab() {
     document.getElementById("defaultOpen").click();
-    document.title = 'Homepage';
-    console.log(document.title);
 }
 
 var myIndex = 0;
