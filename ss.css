@@ -148,3 +148,20 @@ ul.form {
   width: 500px;
   height: 500px;
 }
+
+.comment {
+text-align: center;
+}
+#title {
+position:absolute;
+top: 13600px;
+left: 500px;
+width:400px;
+height:200px;
+border: 2px solid black;
+padding: 10px;
+background-color: #d6f5f5;
+}
+div {
+padding: 4px;
+}
