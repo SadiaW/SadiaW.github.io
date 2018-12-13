@@ -12,13 +12,24 @@ function openPage(pageName,elmnt,color) {
     elmnt.style.backgroundColor = color;
 }
 
+
 window.onload = function () {
   startTab();
   carousel();
+  fourthTab();
 };
+
+function goBack() {
+  window.history.back()
+}
+function goForward() {
+  window.history.forward()
+}
 
 function startTab() {
     document.getElementById("defaultOpen").click();
+    document.title = 'Homepage';
+    console.log(document.title);
 }
 
 var myIndex = 0;
@@ -32,4 +43,9 @@ function carousel() {
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
     setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+
+function fourthTab() {
+document.title = 'Aesthetics';
+console.log(document.title);
 }
