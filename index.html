@@ -11,17 +11,19 @@
 <body>
     <div>
         <center><img class="mainTitle" src="lolo.jpg"></center>
+        <input type="button" value="Back" onclick="goBack()">
+        <input type="button" value="Forward" onclick="goForward()">
         <br>
         <br>
             <button class="tablink" onclick="openPage('Home', this, 'rgb(102, 0, 102)')" onclick="startTab" onclick="carousel" id="defaultOpen">Home</button>
             <button class="tablink" onclick="openPage('About', this, 'rgb(102, 0, 102)')">About Us</button>
             <button class="tablink" onclick="openPage('Alternatives', this, 'rgb(102, 0, 102)')">Ethical Alternatives</button>
-            <button class="tablink" onclick="openPage('Aesthetics', this, 'rgb(102, 0, 102)')">Ethical Aesthetics</button>
+            <button class="tablink" onclick="openPage('Aesthetics', this, 'rgb(102, 0, 102)')" onclick="fourthTab()">Ethical Aesthetics</button>
             <button class="tablink" onclick="openPage('Donate', this, 'rgb(102, 0, 102)')">Donation Centers</button>
     </div>
 
     <div id="Home" class="tabcontent">
-        <h1><center><strong><em>#BeAConsciousConsumer</em></strong></center></h1>
+        <h1 id="heading1"><center><strong><em>#BeAConsciousConsumer</em></strong></center></h1>
                 <center><img class="mySlides" src="hp1.jpg"></center>
                 <center><img class="mySlides" src="hp2.jpg"></center>
                 <center><img class="mySlides" src="hp3.jpg"></center>
@@ -30,6 +32,20 @@
                 <center><img class="mySlides" src="hp6.jpg"></center>
         <h3><center><p><strong><em>"Fashion creates meaning and meaning creates action. Let us act together towards a sustainable future in fashion!
            Join Fashion Revolution."</strong><h3><h4>~Celine Semaan: Designer, Advocate, Writer, and Founder of Slow Factory and the Library</h4><em></center></p>
+        <p> Enter new title and click button</p>
+        <form name = "changeform">
+          <input type = "text" name = "newtitle" size="40"/>
+          <button type = "button" onclick = "changeTitle();">Change</button>
+        </form>
+        <script>
+          function changeTitle(){
+            if (!document.getElementById) return;
+            var newtitle = document.changeform.newtitle.value;
+            var heading1 = document.getElementById("heading1");
+            heading1.fireChild.nodeValue=newtitle;
+          }
+        </script>
+
     </div>
 
     <div id="About" class="tabcontent">
@@ -48,7 +64,7 @@
           </div>
       <h2><center><u>Join the Movement</u></center></h2>
           <center><img class="picture" src="learn.jpg"></center>
-      <h5><center><strong><u>Sadia<u></strong></center></h5>
+      <h5><center><strong><u>Sadia</u></strong></center></h5>
           <center><img class="pic2" src="bio2.jpg"></center>
     </div>
 
@@ -192,9 +208,62 @@
         <br>
         <a href="http://www.peopletree.co.uk/"><center><img class="seasons" src="spring5.jpg"></center>
         <br>
-        <a href="https://groveandbay.com/"><center><img class="seasons" src="spring6.jpg"></center>
+        <a href="https://groveandbay.com/"><center><img class="seasons" src="spring6.jpg"></center></a>
         <br>
         <br>
+        <br>
+        <br>
+
+        <div class="comment">
+            <textarea id="title" type="text "rows="20" cols="40" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+            <input type="submit" value="Post" onclick="insert()" style="width:50px;" />
+            <input type="button" onclick="del()" value="Delete"/>
+            <button type="button" name="left" onclick="pos(-1,0);">Left</button>
+            <button type="button" name="right" onclick="pos(1,0);">Right</button>
+            <button type="button" name="up" onclick="pos(0,-1);">Up</button>
+            <button type="button" name="down" onclick="pos(0,1);">Down</button>
+        </div>
+
+        <div id="display"></div>
+
+                <script>
+                    var titles = [];
+                    var titleInput = document.getElementById("title");
+                    var messageBox = document.getElementById("display");
+                    function Allow() {
+                        if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="") {
+                            user.title.value="";
+                            alert("Please Enter only alphabets");
+                    }
+                    window.location.reload()
+                    }
+
+                    function insert () {
+                        titles.push(titleInput.value);
+                        clearAndShow();
+                    }
+
+        var x=100, y=150;
+        function pos(dx,dy) {
+          if (!document.getElementById) return;
+            x +=30*dx;
+            y +=30*dy;
+            obj = document.getElementById("title");
+            obj.style.top=y + "px";
+            obj.style.left=x + "px";
+            }
+                    function clearAndShow () {
+                        titleInput.value = "";
+                        messageBox.innerHTML = "";
+                        messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+                        document.getElementById("display").style.display = 'block';
+                    }
+
+                    function del() {
+                        document.getElementById("display").style.display = "none";
+                    }
+          </script>
+
 
     </div>
 
