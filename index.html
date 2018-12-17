@@ -71,15 +71,6 @@
           <center><img id="caption" src="clothingcrisis.JPG" onmouseover="bigImg(this)" onmouseout="normalImg(this)" onmouseover="caption(this)" onmouseout="clearCaption()"></center>
           <style>data-text="Colorful Makeup"</style>
           <script language="javascript" type="text/javascript">
-function bigImg(x) {
-    x.style.height = "64px";
-    x.style.width = "64px";
-}
-
-function normalImg(x) {
-    x.style.height = "32px";
-    x.style.width = "32px";
-}
     // sets the caption for the clicked img
     function caption(img){
        // finds the element with an id="caption"
@@ -100,6 +91,15 @@ function normalImg(x) {
        document.getElementById("defaultCaption").style.display = "block";
        document.getElementById("caption").style.display = "none";
     }
+    function bigImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+}
+
+function normalImg(x) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+}
  </script>
       </div>
     </div>
