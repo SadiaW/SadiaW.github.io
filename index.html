@@ -68,6 +68,19 @@
       <h5><center><strong><u>Sadia</u></strong></center></h5>
           <center><img class="pic2" src="bio2.jpg"></center>
       <div>
+          <center><strong><span id = "span" onmouseover="bigText(this)" onmouseout="normalText(this)" width="32" height="32">Take action against fast fashion now!</span></strong></center>
+
+            <script>
+            function bigText() {
+               var span = document.getElementById("span");
+               span.style.fontSize = "70px";
+            }
+
+            function normalText() {
+               var span = document.getElementById("span");
+               span.style.fontSize = "30px";
+            }
+            </script>
           <center><img src="clothingcrisis.JPG" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></center>
           <center><strong><p id = "if">Who made your clothes?</p></strong></center>
           <script language="javascript" type="text/javascript">
