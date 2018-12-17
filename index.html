@@ -73,8 +73,6 @@
           <script language="javascript" type="text/javascript">
     // sets the caption for the clicked img
        function bigImg(x) {
-        x.style.height = "64px";
-        x.style.width = "64px"; function caption(img){
        // finds the element with an id="caption"
        var ctrl = document.getElementById("caption");
 
@@ -86,14 +84,15 @@
 
        // hides the defaultCaption element
        document.getElementById("defaultCaption").style.display = "none";
+       x.style.height = "64px";
+       x.style.width = "64px"; function caption(img){
     }
 
     // shows the defaultCaption and hides the caption div
 function normalImg(x) {
+    document.getElementById("caption").style.display = "none";
     x.style.height = "32px";
     x.style.width = "32px";
-    document.getElementById("defaultCaption").style.display = "block";
-    document.getElementById("caption").style.display = "none";
 }
  </script>
           
