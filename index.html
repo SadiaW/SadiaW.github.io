@@ -67,11 +67,33 @@
           <center><img class="picture" src="learn.jpg"></center>
       <h5><center><strong><u>Sadia</u></strong></center></h5>
           <center><img class="pic2" src="bio2.jpg"></center>
-      <div class="textOverImage"
-      style="background-image:clothingcrisis.JPG;"
-      data-text="Colorful Makeup;"
-      onmouseover="width='300';height='200';"
-      onmouseout="width='150';height='100';" />
+      <div class="textOverImage">
+          <center><img src="clothingcrisis.JPG" onmouseover="caption(this)" onmouseout="clearCaption()"></center>
+          <style>data-text="Colorful Makeup"</style>
+          <script language="javascript" type="text/javascript">
+
+    // sets the caption for the clicked img
+    function caption(img){
+       // finds the element with an id="caption"
+       var ctrl = document.getElementById("caption");
+
+       // sets the text of the element = the alt property of the img
+       alert(img.alt);
+       ctrl.innerText = img.alt;
+
+       // sets the css display property = block (shows the element)
+       ctrl.style.display = "block";
+
+       // hides the defaultCaption element
+       document.getElementById("defaultCaption").style.display = "none";
+    }
+
+    // shows the defaultCaption and hides the caption div
+    function clearCaption() {
+       document.getElementById("defaultCaption").style.display = "block";
+       document.getElementById("caption").style.display = "none";
+    }
+ </script>
       </div>
     </div>
 
