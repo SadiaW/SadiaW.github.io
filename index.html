@@ -68,10 +68,18 @@
       <h5><center><strong><u>Sadia</u></strong></center></h5>
           <center><img class="pic2" src="bio2.jpg"></center>
       <div class="textOverImage">
-          <center><img id="caption" src="clothingcrisis.JPG" onmouseover="caption(this)" onmouseout="clearCaption()"></center>
+          <center><img id="caption" src="clothingcrisis.JPG" onmouseover="bigImg(this)" onmouseout="normalImg(this)" onmouseover="caption(this)" onmouseout="clearCaption()"></center>
           <style>data-text="Colorful Makeup"</style>
           <script language="javascript" type="text/javascript">
+function bigImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+}
 
+function normalImg(x) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+}
     // sets the caption for the clicked img
     function caption(img){
        // finds the element with an id="caption"
