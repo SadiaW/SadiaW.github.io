@@ -73,13 +73,13 @@
           <script language="javascript" type="text/javascript">
     // sets the caption for the clicked img
        function bigImg(x) {
+       x.style.height = "64px";
+       x.style.width = "64px";
        // finds the element with an id="caption"
        var ctrl = document.getElementById("caption");
 
        // sets the text of the element = the alt property of the img
        alert("Who made your clothes?");
-       x.style.height = "64px";
-       x.style.width = "64px";
        // sets the css display property = block (shows the element)
        ctrl.style.display = "block";
 
