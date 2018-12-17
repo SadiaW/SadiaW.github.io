@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="ss.js"></script>
     <script>
-    function changeTitle() {
-       if (!document.getElementById) return;
-       var newtitle = document.changeform.newtitle.value;
-       var heading1 = document.getElementById("heading1");
-       heading1.firstChild.nodeValue=newtitle;
-    }
-    </script>
+          function changeTitle(){
+            if (!document.getElementById) return;
+            var newtitle = document.changeform.newtitle.value;
+            var heading1 = document.getElementById("heading1");
+            heading1.fireChild.nodeValue=newtitle;
+          }
+        </script>
 </head>
 
 <body>
@@ -31,12 +31,7 @@
     </div>
 
     <div id="Home" class="tabcontent">
-        <h1 id="heading1">#BeAConsciousConsumer</h1>
-        <p> Enter new title and click button</p>
-        <form name = "changeform">
-          <input type = "text" name = "newtitle" size="40"/>
-          <button type = "button" onclick = "changeTitle();">Change</button>
-        </form>
+        <h1 id="heading1"><center><strong><em>#BeAConsciousConsumer</em></strong></center></h1>
                 <center><img class="mySlides" src="hp1.jpg"></center>
                 <center><img class="mySlides" src="hp2.jpg"></center>
                 <center><img class="mySlides" src="hp3.jpg"></center>
@@ -45,6 +40,12 @@
                 <center><img class="mySlides" src="hp6.jpg"></center>
         <h3><center><p><strong><em>"Fashion creates meaning and meaning creates action. Let us act together towards a sustainable future in fashion!
            Join Fashion Revolution."</strong><h3><h4>~Celine Semaan: Designer, Advocate, Writer, and Founder of Slow Factory and the Library</h4><em></center></p>
+        <p> Enter new title and click button</p>
+        <form name = "changeform">
+          <input type = "text" name = "newtitle" size="40"/>
+          <button type = "button" onclick = "changeTitle();">Change</button>
+        </form>
+
     </div>
 
     <div id="About" class="tabcontent">
