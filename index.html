@@ -68,7 +68,7 @@
       <h5><center><strong><u>Sadia</u></strong></center></h5>
           <center><img class="pic2" src="bio2.jpg"></center>
       <div class="textOverImage">
-          <center><img src="clothingcrisis.JPG" onmouseover="caption(this)" onmouseout="clearCaption()"></center>
+          <center><img id="caption" src="clothingcrisis.JPG" onmouseover="caption(this)" onmouseout="clearCaption()"></center>
           <style>data-text="Colorful Makeup"</style>
           <script language="javascript" type="text/javascript">
 
@@ -78,7 +78,7 @@
        var ctrl = document.getElementById("caption");
 
        // sets the text of the element = the alt property of the img
-       alert(img.alt);
+       alert("Who made your clothes?");
        ctrl.innerText = img.alt;
 
        // sets the css display property = block (shows the element)
