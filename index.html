@@ -11,8 +11,8 @@
 <body>
     <div>
         <center><img class="mainTitle" src="lolo.jpg"></center>
-        <input type="button" value="Back" onclick="goBack()">
-        <input type="button" value="Forward" onclick="goForward()">
+        <input type="button" class="button" value="Back" onclick="goBack()">
+        <input type="button" class="button" value="Forward" onclick="goForward()">
         <br>
         <br>
             <button class="tablink" onclick="openPage('Home', this, 'rgb(102, 0, 102)')" onclick="startTab" onclick="carousel" id="defaultOpen">Home</button>
@@ -35,7 +35,7 @@
         <p> Enter new title and click button</p>
         <form name = "changeform">
           <input type = "text" name = "newtitle" size="40"/>
-          <button type = "button" onclick = "changeTitle();">Change</button>
+          <button type = "button" class="button" onclick = "changeTitle();">Change</button>
         </form>
         <script>
           function changeTitle(){
@@ -68,32 +68,30 @@
       <h5><center><strong><u>Sadia</u></strong></center></h5>
           <center><img class="pic2" src="bio2.jpg"></center>
       <div>
-          <center><strong><span id = "span" onmouseover="bigText(this)" onmouseout="normalText(this)" width="32" height="32">Take action against fast fashion now!</span></strong></center>
+          <center><strong><span id = "span" style="color:#330033;" onmouseover="bigText(this)" onmouseout="normalText(this)" width="32" height="32">Take action against fast fashion now!</span></strong></center>
 
             <script>
             function bigText() {
                var span = document.getElementById("span");
                span.style.fontSize = "70px";
             }
-
             function normalText() {
                var span = document.getElementById("span");
                span.style.fontSize = "30px";
             }
             </script>
           <center><img src="clothingcrisis.JPG" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></center>
-          <center><strong><p id = "if">Who made your clothes?</p></strong></center>
+          <center><strong><p id = "if" style="color:#330033;">Who made your clothes?</p></strong></center>
           <script language="javascript" type="text/javascript">
           function bigImg(x) {
-            x.style.height = "64px";
-            x.style.width = "64px";
+            x.style.height = "600px";
+            x.style.width = "600px";
             var y = document.getElementById("if");
             y.style.display = "block";
           }
-
           function normalImg(x) {
-            x.style.height = "32px";
-            x.style.width = "32px";
+            x.style.height = "300px";
+            x.style.width = "300px";
             var y = document.getElementById("if");
             y.style.display = "none";
           }
@@ -270,12 +268,10 @@
                     }
                     window.location.reload()
                     }
-
                     function insert () {
                         titles.push(titleInput.value);
                         clearAndShow();
                     }
-
         var x=100, y=150;
         function pos(dx,dy) {
           if (!document.getElementById) return;
@@ -291,7 +287,6 @@
                         messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
                         document.getElementById("display").style.display = 'block';
                     }
-
                     function del() {
                         document.getElementById("display").style.display = "none";
                     }
