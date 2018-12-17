@@ -6,6 +6,14 @@
     <link rel="stylesheet" type="text/css" href="ss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="ss.js"></script>
+    <script>
+    function changeTitle() {
+       if (!document.getElementById) return;
+       var newtitle = document.changeform.newtitle.value;
+       var heading1 = document.getElementById("heading1");
+       heading1.firstChild.nodeValue=newtitle;
+    }
+    </script>
 </head>
 
 <body>
@@ -37,15 +45,6 @@
           <input type = "text" name = "newtitle" size="40"/>
           <button type = "button" onclick = "changeTitle();">Change</button>
         </form>
-        <script>
-          function changeTitle(){
-            if (!document.getElementById) return;
-            var newtitle = document.changeform.newtitle.value;
-            var heading1 = document.getElementById("heading1");
-            heading1.firstChild.nodeValue=newtitle;
-          }
-        </script>
-
     </div>
 
     <div id="About" class="tabcontent">
