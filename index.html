@@ -67,35 +67,24 @@
           <center><img class="picture" src="learn.jpg"></center>
       <h5><center><strong><u>Sadia</u></strong></center></h5>
           <center><img class="pic2" src="bio2.jpg"></center>
-      <div class="textOverImage">
-          <center><img id="caption" src="clothingcrisis.JPG" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></center>
-          <style>data-text="Colorful Makeup"</style>
+      <div>
+          <center><img src="clothingcrisis.JPG" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></center>
+          <center><strong><p id = "if">Who made your clothes?</p></strong></center>
           <script language="javascript" type="text/javascript">
-    // sets the caption for the clicked img
-       function bigImg(x) {
-       x.style.height = "64px";
-       x.style.width = "64px";
-       // finds the element with an id="caption"
-       var ctrl = document.getElementById("caption");
+          function bigImg(x) {
+            x.style.height = "64px";
+            x.style.width = "64px";
+            var y = document.getElementById("if");
+            y.style.display = "block";
+          }
 
-       // sets the text of the element = the alt property of the img
-       alert("Who made your clothes?");
-       // sets the css display property = block (shows the element)
-       ctrl.style.display = "block";
-
-       // hides the defaultCaption element
-       document.getElementById("defaultCaption").style.display = "none";
-    }
-
-    // shows the defaultCaption and hides the caption div
-function normalImg(x) {
-   x.style.height = "32px";
-   x.style.width = "32px";
-   document.getElementById("defaultCaption").style.display = "block";
-   document.getElementById("caption").style.display = "none";
-}
- </script>
-          
+          function normalImg(x) {
+            x.style.height = "32px";
+            x.style.width = "32px";
+            var y = document.getElementById("if");
+            y.style.display = "none";
+          }
+          </script>
       </div>
     </div>
 
