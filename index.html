@@ -6,14 +6,6 @@
     <link rel="stylesheet" type="text/css" href="ss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="ss.js"></script>
-    <script>
-          function changeTitle(){
-            if (!document.getElementById) return;
-            var newtitle = document.changeform.newtitle.value;
-            var heading1 = document.getElementById("heading1");
-            heading1.fireChild.nodeValue=newtitle;
-          }
-        </script>
 </head>
 
 <body>
@@ -31,7 +23,7 @@
     </div>
 
     <div id="Home" class="tabcontent">
-        <h1 id="heading1"><center><strong><em>#BeAConsciousConsumer</em></strong></center></h1>
+        <center><strong><em><h1 id="heading1">#BeAConsciousConsumer</h1></em></strong></center>
                 <center><img class="mySlides" src="hp1.jpg"></center>
                 <center><img class="mySlides" src="hp2.jpg"></center>
                 <center><img class="mySlides" src="hp3.jpg"></center>
@@ -45,6 +37,15 @@
           <input type = "text" name = "newtitle" size="40"/>
           <button type = "button" onclick = "changeTitle();">Change</button>
         </form>
+        <script>
+          function changeTitle(){
+            if (!document.getElementById) return;
+            var newtitle = document.changeform.newtitle.value;
+            var heading1 = document.getElementById("heading1");
+            heading1.firstChild.nodeValue=newtitle;
+            document.getElementById("heading1").innerHTML = newtitle
+          }
+        </script>
 
     </div>
 
